@@ -12,11 +12,11 @@ class Footer extends Component {
     render(){
         return(
             <footer className="text-center">
-                <Link to="/">Accueil</Link>
+                <Link to="/">Inicio</Link>
                 <span className="m-2">-</span>
-                <a href="https://github.com/MieuxVoter">Code source</a>
+                <a href="https://github.com/MieuxVoter">Código fuente</a>
                 <span className="m-2">-</span>
-                <a href="https://mieuxvoter.fr/">Qui sommes nous ?</a>
+                <a href="https://mieuxvoter.fr/">Quiénes somos ?</a>
                 <div className="mt-2">
                     MieuxVoter &copy;
                 </div>

@@ -105,7 +105,7 @@ class Vote extends Component {
     };
 
     handleSubmitWithoutAllRate = () => {
-        toast.error("Vous devez évaluer l'ensemble des propositions/candidats !", {
+        toast.error("Debes evaluar todas las propuestas / candidatos !", {
             position: toast.POSITION.TOP_CENTER
         });
     };
@@ -201,7 +201,7 @@ class Vote extends Component {
 
                     <Row>
                         <Col className="text-center" >
-                            {(this.state.ratedCandidates.length!==this.state.candidates.length)?<Button type="button" onClick={this.handleSubmitWithoutAllRate} className="btn btn-dark "><FontAwesomeIcon icon={faCheck} className="mr-2" />Valider</Button>:<Button type="submit" className="btn btn-success "><FontAwesomeIcon icon={faCheck} className="mr-2" />Valider</Button>}
+                            {(this.state.ratedCandidates.length!==this.state.candidates.length)?<Button type="button" onClick={this.handleSubmitWithoutAllRate} className="btn btn-dark "><FontAwesomeIcon icon={faCheck} className="mr-2" />Validar</Button>:<Button type="submit" className="btn btn-success "><FontAwesomeIcon icon={faCheck} className="mr-2" />Validar</Button>}
                          </Col>
                     </Row>
 

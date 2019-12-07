@@ -45,8 +45,8 @@ class UnknownView extends Component {
                         <Link  to="/" className="d-block ml-auto mr-auto mb-4"><img src={logoLine} alt="logo" height="128" /></Link>
                     </Row>
                     <Row className="mt-4">
-                        <Col className="text-center offset-lg-3" lg="6"><h2>Vote créé avec succès !</h2>
-                        <p className="mt-4 mb-1">Vous pouvez maintenant partager le lien du vote aux participants :</p>
+                        <Col className="text-center offset-lg-3" lg="6"><h2>Voto creado con éxito !</h2>
+                        <p className="mt-4 mb-1">Ahora puede compartir el enlace de votación con los participantes :</p>
 
 
                             <div className="input-group  ">
@@ -61,7 +61,7 @@ class UnknownView extends Component {
 
                             </div>
 
-                            <p className="mt-4 mb-1">Voici le lien vers les résultats du vote en temps réel :</p>
+                            <p className="mt-4 mb-1">Aquí está el enlace a los resultados de la votación en tiempo real :</p>
                             <div className="input-group ">
                                 <input type="text" className="form-control" ref={this.urlResultField}
                                        value={this.state.urlOfResult} readOnly onClick={this.handleClickOnField} />
@@ -79,9 +79,9 @@ class UnknownView extends Component {
                     </Row>
                 <Row className="mt-4 mb-4" >
                     <Col >
-                        <div className=" bg-warning text-white p-2 "><p className="m-0 p-0 text-center">Conservez ces liens précieusement !</p>
-                        <p className="small m-2 p-0"><b>ATTENTION</b> : Vous ne les retrouverez pas ailleurs et nous ne serons pas capable de vous les communiquer. Vous pouvez par exemple les enregistrer dans les favoris de votre
-                            navigateur.</p></div>
+                        <div className=" bg-warning text-white p-2 "><p className="m-0 p-0 text-center">Mantenga estos enlaces en un lugar seguro !</p>
+                        <p className="small m-2 p-0"><b>ATENCIÓN</b> : No los encontrará en otro lugar y no podremos enviárselos. 
+                        Por ejemplo, puede guardarlos en los favoritos de su navegador.</p></div>
                     </Col>
                 </Row>
 

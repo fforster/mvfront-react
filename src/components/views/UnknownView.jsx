@@ -19,11 +19,11 @@ class UnknownView extends Component {
                         <Link  to="/" className="d-block ml-auto mr-auto mb-4"><img src={logoLine} alt="logo" height="128" /></Link>
                     </Row>
                     <Row className="mt-4">
-                        <Col className="text-center"><h2>Oups ! Cette page n'existe pas</h2></Col>
+                        <Col className="text-center"><h2>¡Ups! Esta página no existe !</h2></Col>
                     </Row>
                     <Row className="mt-4" >
                         <Col className="text-center">
-                            <Link to="/" className="btn btn-secondary">Revenir à l'accueil</Link>
+                            <Link to="/" className="btn btn-secondary">Volver al inicio</Link>
                         </Col>
                     </Row>
             </Container>

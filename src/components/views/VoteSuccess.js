@@ -16,15 +16,15 @@ class UnknownView extends Component {
                     </Row>
                     <Row className="mt-4">
                       <Col className="text-center offset-lg-3" lg="6">
-                        <h2>Participation enregistrée avec succès !</h2>
-                        <p>Merci pour votre participation.</p>
+                        <h2>Participación registrada con éxito !</h2>
+                        <p>Gracias por su participación.</p>
 
                         </Col>
                     </Row>
 
                 <Row className="mt-4" >
                     <Col className="text-center">
-                        <Link to="/" className="btn btn-secondary">Revenir à l'accueil</Link>
+                        <Link to="/" className="btn btn-secondary">Volver al inicio</Link>
                     </Col>
                 </Row>
             </Container>

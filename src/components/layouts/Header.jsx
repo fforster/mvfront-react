@@ -40,8 +40,8 @@ class Header extends Component {
                         </div>
                         <div className="align-self-center ml-2">
                             <div className="logo-text">
-                                <h1>Plateforme de vote
-                                    <small>Jugement Majoritaire</small>
+                                <h1>Plataforma de votación
+                                    <small>Juicio Mayoritario</small>
                                 </h1>
 
                             </div>
@@ -52,7 +52,7 @@ class Header extends Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <Link className="text-primary nav-link" to="/create-election/"><FontAwesomeIcon icon={faRocket} className="mr-2"/> Démarrer un vote</Link>
+                                <Link className="text-primary nav-link" to="/create-election/"><FontAwesomeIcon icon={faRocket} className="mr-2"/> Comienza una votación</Link>
                             </NavItem>
                         </Nav>
                     </Collapse>

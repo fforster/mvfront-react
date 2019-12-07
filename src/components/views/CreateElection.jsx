@@ -39,23 +39,23 @@ const SortableCandidate = sortableElement(({candidate, sortIndex, form}) => <li 
                     <Input type="text" value={candidate.label}
                            onChange={(event) => form.editCandidateLabel(event, sortIndex)}
                            onKeyPress={(event) => form.handleKeypressOnCandidateLabel(event, sortIndex)}
-                           placeholder="Nom du candidat ou de la proposition ..."
+                           placeholder="Nombre de su candidato o propuesta ..."
                            tabIndex={ sortIndex + 1}
                            innerRef={(ref) => form.candidateInputs[sortIndex] = ref}
                            maxLength="250"/>
                     <ButtonWithConfirm className="btn btn-primary input-group-append border-light">
                         <div key="button"><FontAwesomeIcon icon={faTrashAlt} /></div>
-                        <div key="modal-title">Suppression ?</div>
-                        <div key="modal-body">Êtes-vous sûr de vouloir supprimer {(candidate.label!=="")?<b>"{candidate.label}"</b>:<span>la ligne {sortIndex+1}</span>} ?
+                        <div key="modal-title">Eliminar ?</div>
+                        <div key="modal-body">Está seguro que desea eliminar? {(candidate.label!=="")?<b>"{candidate.label}"</b>:<span>la ligne {sortIndex+1}</span>} ?
                         </div>
-                        <div key="modal-confirm" onClick={() => form.removeCandidate(sortIndex)}>Oui</div>
-                        <div key="modal-cancel">Non</div>
+                        <div key="modal-confirm" onClick={() => form.removeCandidate(sortIndex)}>Sí</div>
+                        <div key="modal-cancel">No</div>
                     </ButtonWithConfirm>
                 </InputGroup>
             </Col>
             <Col xs="auto" className="align-self-center pl-0">
                 <HelpButton>
-                    Saisissez ici le nom de votre candidat ou de votre proposition (250 caractères max.)
+                    Introduzca acá el nombre de su candidato o propuesta (250 caracteres máx.)
                 </HelpButton>
             </Col>
         </Row>
@@ -191,7 +191,7 @@ class CreateElection extends Component {
     };
 
     handleSendWithoutCandidate = () => {
-        toast.error("Vous devez saisir au moins deux candidats !", {
+        toast.error("Debe ingresar al menos dos candidatos !", {
             position: toast.POSITION.TOP_CENTER
         });
     };
@@ -207,26 +207,26 @@ class CreateElection extends Component {
                 <ToastContainer/>
                 <form onSubmit={this.handleSubmit} autoComplete="off" >
                     <Row>
-                        <Col ><h3>Démarrer un vote</h3></Col>
+                        <Col ><h3>Comience una votación</h3></Col>
                     </Row>
                     <hr />
                     <Row className="mt-4">
                         <Col xs="12" >
-                            <Label for="title">Question du vote :</Label>
+                            <Label for="title">Pregunta de la votación :</Label>
                         </Col>
                         <Col>
-                            <Input placeholder="Saisissez ici la question de votre vote" tabIndex="1" name="title" id="title" innerRef={this.focusInput} autoFocus  defaultValue={params.get("title")?params.get("title"):""} onChange={this.handleChangeTitle} maxLength="250" />
+                            <Input placeholder="Introduzca acá la pregunta de su votación" tabIndex="1" name="title" id="title" innerRef={this.focusInput} autoFocus  defaultValue={params.get("title")?params.get("title"):""} onChange={this.handleChangeTitle} maxLength="250" />
                         </Col>
                         <Col xs="auto" className="align-self-center pl-0">
                             <HelpButton>
-                                Posez ici votre question ou introduisez simplement votre vote (250 caractères max.)
-                                <br /><u>Par exemple :</u> <em>Pour être mon représentant, je juge ce candidat ...</em>
+                                Introduza acá su pregunta o simplemente el encabezado de su voto (250 caracteres máx.)
+                                <br /><u>Por ejemplo :</u> <em>Para ser mi representante, evalúo a este candidato ...</em>
                             </HelpButton>
                         </Col>
                     </Row>
                     <Row className="mt-4">
                         <Col xs="12" >
-                            <Label for="title">Candidats / Propositions :</Label>
+                            <Label for="title">Candidatos / Propuestas :</Label>
                         </Col>
                         <Col xs="12" >
                             <SortableCandidatesContainer items={this.state.candidates} onSortEnd={this.onCandidatesSortEnd}
@@ -239,13 +239,13 @@ class CreateElection extends Component {
                                 tabIndex={this.state.candidates.length+2}
                                 type="button"
                                 onClick={(event)=>this.addCandidate(event)}>
-                            <FontAwesomeIcon icon={faPlus} className="mr-2" />Ajouter une proposition</Button>
+                            <FontAwesomeIcon icon={faPlus} className="mr-2" />Agregar una propuesta</Button>
                         </Col>
                         <Col xs="auto" />
                     </Row>
                     <Row className="mt-4 mb-4">
                         <Col xs="12" >
-                            <Label for="title">Nombre de mentions :</Label>
+                            <Label for="title">Número de opciones :</Label>
                         </Col>
                         <Col  xs="" md="2" >
                             <select  className="form-control" tabIndex={this.state.candidates.length+3} onChange={this.handleChangeNumGrades}  defaultValue="7">
@@ -256,8 +256,8 @@ class CreateElection extends Component {
                         </Col>
                         <Col xs="auto" className="align-self-center pl-0">
                             <HelpButton>
-                                Vous pouvez choisir ici le nombre de mentions pour votre vote
-                                <br /><u>Par exemple : </u> <em> 5 = Excellent, Très bien, bien, assez bien, passable</em>
+                                Puede elegir aquí el número de evaluaciones posibles
+                                <br /><u>Por ejemplo : </u> <em> 5 = Excelente, Muy bueno, bueno, bastante bueno, suficiente</em>
                             </HelpButton>
                         </Col>
                         <Col xs="12" md="" >
@@ -272,13 +272,13 @@ class CreateElection extends Component {
                     <Row className="mt-4 justify-content-md-center">
                         <Col xs="12"  md="3"   >
                             {this.state.numCandidatesWithLabel>=2?<ButtonWithConfirm className="btn btn-success float-right btn-block" tabIndex={this.state.candidates.length+4}>
-                                <div key="button"><FontAwesomeIcon icon={faCheck} className="mr-2" />Valider</div>
-                                <div key="modal-title">Confirmez votre vote</div>
+                                <div key="button"><FontAwesomeIcon icon={faCheck} className="mr-2" />Validar</div>
+                                <div key="modal-title">Confirme su voto</div>
                                 <div key="modal-body">
                                     <div className="mt-1 mb-1">
-                                        <div className="text-white bg-primary p-1">Question du vote :</div>
+                                        <div className="text-white bg-primary p-1">Pregunta de la votación :</div>
                                         <div className="p-1 pl-3"><em>{this.state.title}</em></div>
-                                        <div className="text-white bg-primary p-1">Candidats/Propositions :</div>
+                                        <div className="text-white bg-primary p-1">Candidatos/Propuestas :</div>
                                         <div className="p-1 pl-0"><ul className="m-0 pl-4">
                                             {
                                                 this.state.candidates.map((candidate,i) => {
@@ -291,16 +291,16 @@ class CreateElection extends Component {
                                                 })
                                             }
                                         </ul></div>
-                                        <div className="text-white bg-primary p-1">Mentions :</div>
+                                        <div className="text-white bg-primary p-1">Opciones :</div>
                                         <div className="p-1 pl-3">{ grades.map((mention,i) => {
                                             return (i<this.state.numGrades)?<span key={i} className="badge badge-light mr-2 mt-2" style={{backgroundColor:mention.color,color:"#fff"}}>{mention.label}</span>:<span key={i}/>
                                         })
                                         }</div>
                                     </div>
                                 </div>
-                                <div key="modal-confirm" onClick={this.handleSubmit}>Lancer le vote</div>
-                                <div key="modal-cancel">Annuler</div>
-                            </ButtonWithConfirm>:<Button type="button" className="btn btn-dark float-right btn-block" onClick={this.handleSendWithoutCandidate}><FontAwesomeIcon icon={faCheck} className="mr-2" />Valider</Button>}
+                                <div key="modal-confirm" onClick={this.handleSubmit}>Comienza la votación</div>
+                                <div key="modal-cancel">Anular</div>
+                            </ButtonWithConfirm>:<Button type="button" className="btn btn-dark float-right btn-block" onClick={this.handleSendWithoutCandidate}><FontAwesomeIcon icon={faCheck} className="mr-2" />Validar</Button>}
                         </Col>
                     </Row>
                 </form>
